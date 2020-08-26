@@ -1,0 +1,31 @@
+@import "src/style";
+
+.router-mapping {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+
+  .router-mapping_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      span {
+        font-size: 18px;
+        color: #8671d5;
+        text-decoration: underline solid #8671d5;
+      }
+    }
+    span {
+      font-size: 18px;
+      color: gray;
+      font-weight: normal;
+    }
+    p {
+      margin: 0 5px;
+      font-size: 10px;
+      color: gray;
+    }
+  }
+}

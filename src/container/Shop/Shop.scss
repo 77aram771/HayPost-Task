@@ -1,0 +1,25 @@
+@import "src/style";
+
+.shop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px 0;
+  h1 {
+    color: #816bcc;
+    font-weight: normal;
+  }
+  .shop-p {
+    font-weight: bold;
+    margin-bottom: 15px;
+    span {
+      text-decoration: underline dotted #000;
+    }
+  }
+  .shop-items__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

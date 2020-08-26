@@ -1,0 +1,56 @@
+$comp: 1024px;
+$tablet: 720px;
+$phone: 320px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin borderBox {
+  border: 1px solid red;
+}
+
+@mixin adaptiv-to($media) {
+  @if $media == phone-screens {
+    @media only screen
+    and (max-width: $tablet - 1) {
+      @content;
+    }
+  } @else if $media == tablet-screens {
+    @media only screen
+    and (min-width: $tablet)
+    and (max-width: $comp) {
+      @content;
+    }
+  } @else if $media == comp-screens {
+    @media only screen
+    and (min-width: $comp + 1)
+    and (min-width: $comp) {
+      @content;
+    }
+  }
+}
+
+.containerBox {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .containerBox-mine {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+}
